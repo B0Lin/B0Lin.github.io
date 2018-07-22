@@ -15,18 +15,18 @@
     <meta name="keywords" content="forsigner,前端,设计,Hexo主题,前端开发,用户体验,设计,frontend,design,nodejs,JavaScript" />
   
 
-  <meta name="description" content="git init – Create an empty Git repository or reinitialize an existing one   git init (folderName) – 在folderName目录下创建一个用于存放所有数据和资源的.git目录。    git add – Add file contents to the index. git add     git">
+  <meta name="description" content="git init – Create an empty Git repository or reinitialize an existing one   git init (folderName) – 创建一个名为folderName的目录，并在该目录下创建一个用于存放所有数据和资源的.git目录。    git add – Add file contents to the index.   gi">
 <meta property="og:type" content="article">
 <meta property="og:title" content="git常用指令">
 <meta property="og:url" content="http://yoursite.com/2018/07/22/git常用指令/index.html">
 <meta property="og:site_name" content="B0Lin&#39;s Blog">
-<meta property="og:description" content="git init – Create an empty Git repository or reinitialize an existing one   git init (folderName) – 在folderName目录下创建一个用于存放所有数据和资源的.git目录。    git add – Add file contents to the index. git add     git">
+<meta property="og:description" content="git init – Create an empty Git repository or reinitialize an existing one   git init (folderName) – 创建一个名为folderName的目录，并在该目录下创建一个用于存放所有数据和资源的.git目录。    git add – Add file contents to the index.   gi">
 <meta property="og:locale" content="default">
 <meta property="og:image" content="http://yoursite.com/2018/07/22/git常用指令/g_i.png">
-<meta property="og:updated_time" content="2018-07-22T08:28:54.069Z">
+<meta property="og:updated_time" content="2018-07-22T09:53:44.753Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="git常用指令">
-<meta name="twitter:description" content="git init – Create an empty Git repository or reinitialize an existing one   git init (folderName) – 在folderName目录下创建一个用于存放所有数据和资源的.git目录。    git add – Add file contents to the index. git add     git">
+<meta name="twitter:description" content="git init – Create an empty Git repository or reinitialize an existing one   git init (folderName) – 创建一个名为folderName的目录，并在该目录下创建一个用于存放所有数据和资源的.git目录。    git add – Add file contents to the index.   gi">
 <meta name="twitter:image" content="http://yoursite.com/2018/07/22/git常用指令/g_i.png">
 
   
@@ -231,24 +231,23 @@
 <li><em><a href="https://git-scm.com/docs/git-init" target="_blank" rel="noopener">git init</a></em> – Create an empty Git repository or reinitialize an existing one</li>
 </ol>
 <blockquote>
-<p>git init (folderName) – 在folderName目录下创建一个用于存放所有数据和资源的.git目录。</p>
+<p>git init (folderName) – 创建一个名为folderName的目录，并在该目录下创建一个用于存放所有数据和资源的.git目录。</p>
 </blockquote>
 <p><div align="center"><img src="/2018/07/22/git常用指令/g_i.png" alt="git init"></div></p>
 <ol start="2">
-<li><em><a href="https://git-scm.com/docs/git-add" target="_blank" rel="noopener">git add</a></em> – Add file contents to the index.<blockquote>
-<p>git add</p>
-</blockquote>
-</li>
+<li><em><a href="https://git-scm.com/docs/git-add" target="_blank" rel="noopener">git add</a></em> – Add file contents to the index.</li>
 </ol>
-<ol start="3">
-<li><p><em><a href="https://git-scm.com/docs/git-commit" target="_blank" rel="noopener">git commit -v</a></em> – Record changes to the repository</p>
 <blockquote>
-<p>-v<br> how unified diff between the HEAD commit and what would be committed at the bottom of the commit message template to help the user describe the commit by reminding what changes the commit has. Note that this diff output doesn’t have its lines prefixed with #. This diff will not be a part of the commit message. See the commit.verbose configuration variable in git-config[1].</p>
+<p>git add (.|file) – 将文件添加到索引库，即暂存区。</p>
 </blockquote>
-<p> If specified twice, show in addition the unified diff between what would be committed and the worktree files, i.e. the unstaged changes to tracked files.</p>
-<p> git repository分为三部分：本地、缓存区和仓库。</p>
-</li>
+<p><div align="center"><a href="git常用指令/g_a.png">git add</a></div></p>
+<ol start="3">
+<li><em><a href="https://git-scm.com/docs/git-commit" target="_blank" rel="noopener">git commit</a></em> – Record changes to the repository</li>
 </ol>
+<blockquote>
+<p>git commit -m “提交的注释” – 将暂存区中的文件提交到本地库中 </p>
+</blockquote>
+<p><div align="center"><a href="git常用指令/g_c.png">git commit</a></div></p>
 
     
   </div>
