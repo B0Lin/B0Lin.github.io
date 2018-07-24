@@ -15,19 +15,19 @@
     <meta name="keywords" content="forsigner,前端,设计,Hexo主题,前端开发,用户体验,设计,frontend,design,nodejs,JavaScript" />
   
 
-  <meta name="description" content="&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;端口(port) # ，是一种经由软件创建的服务，在一个电脑操作系统中扮演通信的端点（endpoint）。每个通信端口都会与主机的IP地址及通信协议关联。通信端口以16比特数字来表示，这被称为通信端口编号（port number），范围在0-65535。常见的端口 # :&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;20 : FTP(File Tr">
+  <meta name="description" content="123 端口(port)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;是一种经由软件创建的服务，在一个电脑操作系统中扮演通信的端点（endpoint）。每个通信端口都会与主机的IP地址及通信协议关联。通信端口以16比特数字来表示，这被称为通信端口编号（port number），范围在0-65535。 常见的端口&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;20 : FTP(File Trans">
 <meta property="og:type" content="article">
 <meta property="og:title" content="http请求和响应(未完)">
 <meta property="og:url" content="http://yoursite.com/2018/07/24/http请求和响应/index.html">
 <meta property="og:site_name" content="B0Lin&#39;s Blog">
-<meta property="og:description" content="&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;端口(port) # ，是一种经由软件创建的服务，在一个电脑操作系统中扮演通信的端点（endpoint）。每个通信端口都会与主机的IP地址及通信协议关联。通信端口以16比特数字来表示，这被称为通信端口编号（port number），范围在0-65535。常见的端口 # :&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;20 : FTP(File Tr">
+<meta property="og:description" content="123 端口(port)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;是一种经由软件创建的服务，在一个电脑操作系统中扮演通信的端点（endpoint）。每个通信端口都会与主机的IP地址及通信协议关联。通信端口以16比特数字来表示，这被称为通信端口编号（port number），范围在0-65535。 常见的端口&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;20 : FTP(File Trans">
 <meta property="og:locale" content="default">
 <meta property="og:image" content="http://yoursite.com/2018/07/24/http请求和响应/http1.png">
 <meta property="og:image" content="http://yoursite.com/2018/07/24/http请求和响应/http2.png">
-<meta property="og:updated_time" content="2018-07-24T11:32:58.180Z">
+<meta property="og:updated_time" content="2018-07-24T14:23:16.311Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="http请求和响应(未完)">
-<meta name="twitter:description" content="&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;端口(port) # ，是一种经由软件创建的服务，在一个电脑操作系统中扮演通信的端点（endpoint）。每个通信端口都会与主机的IP地址及通信协议关联。通信端口以16比特数字来表示，这被称为通信端口编号（port number），范围在0-65535。常见的端口 # :&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;20 : FTP(File Tr">
+<meta name="twitter:description" content="123 端口(port)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;是一种经由软件创建的服务，在一个电脑操作系统中扮演通信的端点（endpoint）。每个通信端口都会与主机的IP地址及通信协议关联。通信端口以16比特数字来表示，这被称为通信端口编号（port number），范围在0-65535。 常见的端口&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;20 : FTP(File Trans">
 <meta name="twitter:image" content="http://yoursite.com/2018/07/24/http请求和响应/http1.png">
 
   
@@ -187,7 +187,7 @@
 
   <div id="toc" class="toc-article">
     <strong class="toc-title">文章目录</strong>
-    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#nbsp-nbsp-nbsp-nbsp-端口-port-，是一种经由软件创建的服务，在一个电脑操作系统中扮演通信的端点（endpoint）。每个通信端口都会与主机的IP地址及通信协议关联。通信端口以16比特数字来表示，这被称为通信端口编号（port-number），范围在0-65535。"><span class="toc-text">    端口(port) # ，是一种经由软件创建的服务，在一个电脑操作系统中扮演通信的端点（endpoint）。每个通信端口都会与主机的IP地址及通信协议关联。通信端口以16比特数字来表示，这被称为通信端口编号（port number），范围在0-65535。</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#常见的端口"><span class="toc-text">常见的端口 # :</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#curl-简介"><span class="toc-text">curl 简介</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#HTTP请求"><span class="toc-text">HTTP请求</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#http请求四部分"><span class="toc-text">http请求四部分 #:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#请求方法-："><span class="toc-text">请求方法 #：</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#HTTP响应"><span class="toc-text">HTTP响应</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#http响应四部分-："><span class="toc-text">http响应四部分 #：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#响应状态码"><span class="toc-text">响应状态码 #:</span></a></li></ol></li></ol>
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#端口-port"><span class="toc-text">端口(port)</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#常见的端口"><span class="toc-text">常见的端口</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#curl-简介"><span class="toc-text">curl 简介</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#HTTP请求"><span class="toc-text">HTTP请求</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#http请求四部分"><span class="toc-text">http请求四部分</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#请求方法"><span class="toc-text">请求方法</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#HTTP响应"><span class="toc-text">HTTP响应</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#http响应四部分"><span class="toc-text">http响应四部分</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#响应状态码"><span class="toc-text">响应状态码 #:</span></a></li></ol></li></ol>
   </div>
 
 
@@ -233,7 +233,9 @@
 
   <div class="article-content">
     
-      <h2 id="nbsp-nbsp-nbsp-nbsp-端口-port-，是一种经由软件创建的服务，在一个电脑操作系统中扮演通信的端点（endpoint）。每个通信端口都会与主机的IP地址及通信协议关联。通信端口以16比特数字来表示，这被称为通信端口编号（port-number），范围在0-65535。"><a href="#nbsp-nbsp-nbsp-nbsp-端口-port-，是一种经由软件创建的服务，在一个电脑操作系统中扮演通信的端点（endpoint）。每个通信端口都会与主机的IP地址及通信协议关联。通信端口以16比特数字来表示，这被称为通信端口编号（port-number），范围在0-65535。" class="headerlink" title="&nbsp;&nbsp;&nbsp;&nbsp;端口(port) # ，是一种经由软件创建的服务，在一个电脑操作系统中扮演通信的端点（endpoint）。每个通信端口都会与主机的IP地址及通信协议关联。通信端口以16比特数字来表示，这被称为通信端口编号（port number），范围在0-65535。"></a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://en.wikipedia.org/wiki/Port_(computer_networking" target="_blank" rel="noopener">端口(port)</a> # ，是一种经由软件创建的服务，在一个电脑操作系统中扮演通信的端点（endpoint）。每个通信端口都会与主机的IP地址及通信协议关联。通信端口以16比特数字来表示，这被称为通信端口编号（port number），范围在0-65535。</h2><h3 id="常见的端口"><a href="#常见的端口" class="headerlink" title="常见的端口 # :"></a>常见的端口 # :</h3><p>&nbsp;&nbsp;&nbsp;&nbsp;20 : FTP(File Transfer Protocol) Data Transfer<br>&nbsp;&nbsp;&nbsp;&nbsp;21 : FTP(File Fransfer Protocol) Command Control<br>&nbsp;&nbsp;&nbsp;&nbsp;22 : SSH(Secure Shell) Secure Login<br>&nbsp;&nbsp;&nbsp;&nbsp;25 : SMTP(Simple Mail Transfer Protocol) E-mail Routing<br>&nbsp;&nbsp;&nbsp;&nbsp;53 : DNS(Domain Name System) service<br>&nbsp;&nbsp;&nbsp;&nbsp;80 : <a href="https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol" target="_blank" rel="noopener">HTTP(Hypertext Transfer Protocol)</a> used in the World Wide Web<br>&nbsp;&nbsp;&nbsp;&nbsp;443 : Hypertext Transfer Protocol over TLS/SSL<br>&nbsp;&nbsp;&nbsp;&nbsp;1080 : socks proxy<br>&nbsp;&nbsp;&nbsp;&nbsp;3306 : MySQL database system</p>
+      <p>123</p>
+<h2 id="端口-port"><a href="#端口-port" class="headerlink" title="端口(port)"></a><a href="https://en.wikipedia.org/wiki/Port_(computer_networking" target="_blank" rel="noopener">端口(port)</a></h2><p>&nbsp;&nbsp;&nbsp;&nbsp;是一种经由软件创建的服务，在一个电脑操作系统中扮演通信的端点（endpoint）。每个通信端口都会与主机的IP地址及通信协议关联。通信端口以16比特数字来表示，这被称为通信端口编号（port number），范围在0-65535。</p>
+<h3 id="常见的端口"><a href="#常见的端口" class="headerlink" title="常见的端口"></a>常见的端口</h3><p>&nbsp;&nbsp;&nbsp;&nbsp;20 : FTP(File Transfer Protocol) Data Transfer<br>&nbsp;&nbsp;&nbsp;&nbsp;21 : FTP(File Fransfer Protocol) Command Control<br>&nbsp;&nbsp;&nbsp;&nbsp;22 : SSH(Secure Shell) Secure Login<br>&nbsp;&nbsp;&nbsp;&nbsp;25 : SMTP(Simple Mail Transfer Protocol) E-mail Routing<br>&nbsp;&nbsp;&nbsp;&nbsp;53 : DNS(Domain Name System) service<br>&nbsp;&nbsp;&nbsp;&nbsp;80 : <a href="https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol" target="_blank" rel="noopener">HTTP(Hypertext Transfer Protocol)</a> used in the World Wide Web<br>&nbsp;&nbsp;&nbsp;&nbsp;443 : Hypertext Transfer Protocol over TLS/SSL<br>&nbsp;&nbsp;&nbsp;&nbsp;1080 : socks proxy<br>&nbsp;&nbsp;&nbsp;&nbsp;3306 : MySQL database system</p>
 <p>更多端口参见:<a href="https://en.wikipedia.org/wiki/List_of_TCP_and_UDP_port_numbers" target="_blank" rel="noopener">List of TCP and UDP port numbers</a>.</p>
 <h2 id="curl-简介"><a href="#curl-简介" class="headerlink" title="curl 简介"></a>curl 简介</h2><p><strong>e.g. curl -s -v -H “what you want to add to the request” – “<a href="https://www.baidu.com&quot;" target="_blank" rel="noopener">https://www.baidu.com&quot;</a></strong><br>&nbsp;&nbsp;&nbsp;&nbsp;curl : transfer a url.<br>&nbsp;&nbsp;&nbsp;&nbsp;-s : –silent. Don’t show progress meter or error message.<br>&nbsp;&nbsp;&nbsp;&nbsp;-v : –verbose. Makes the feching more verbose. Mostly useful for debugging.<br>&nbsp;&nbsp;&nbsp;&nbsp;-H : –header. Extra header to use when getting a web page. key: value.<br>&nbsp;&nbsp;&nbsp;&nbsp;– “” : the url of the web page you want to surf.</p>
 <p>如图：</p>
@@ -255,13 +257,13 @@
 <p>HTTP/1.1 302 Found<br>  Connection: Keep-Alive<br>  Content-Length: 17931<br>  Content-Type: text/html<br>  Date: Tue, 24 Jul 2018 06:14:22 GMT<br>  Etag: “54d97488-460b”<br>  Server: bfe/1.0.8.18</p>
 </blockquote>
 <p>chrome中查看请求与响应：<f12> -&gt; Network -&gt; 具体请求的headers -&gt; view source, 如果没有method选项，右键name勾选method。</f12></p>
-<h2 id="HTTP请求"><a href="#HTTP请求" class="headerlink" title="HTTP请求"></a>HTTP请求</h2><h3 id="http请求四部分"><a href="#http请求四部分" class="headerlink" title="http请求四部分 #:"></a>http请求四部分 #:</h3><ol>
+<h2 id="HTTP请求"><a href="#HTTP请求" class="headerlink" title="HTTP请求"></a>HTTP请求</h2><h3 id="http请求四部分"><a href="#http请求四部分" class="headerlink" title="http请求四部分"></a>http请求四部分</h3><ol>
 <li>请求方法 路径(包括查询字符串，但不包括锚点，锚点是给浏览器识别的) 协议/版本号</li>
 <li>请求头(key: value),用于将客户端信息提交给服务器</li>
 <li>空行(\n)，用于分隔请求头和请求正文</li>
 <li>请求主体 提交的数据(GET没有)</li>
 </ol>
-<h3 id="请求方法-："><a href="#请求方法-：" class="headerlink" title="请求方法 #："></a>请求方法 #：</h3><ol>
+<h3 id="请求方法"><a href="#请求方法" class="headerlink" title="请求方法"></a>请求方法</h3><ol>
 <li>GET(获取) : 向指定的资源发出“显示”请求。使用GET方法应该只用在读取数据，而不应当被用于产生“副作用”的操作中，例如在Web Application中。其中一个原因是GET可能会被网络蜘蛛等随意访问。</li>
 <li>POST（新增、上传）: 向指定资源提交数据，请求服务器进行处理（例如提交表单或者上传文件）。数据被包含在请求本文中。这个请求可能会创建新的资源或修改现有资源，或二者皆有。 </li>
 <li>PUT(整体更新) : 向指定资源位置上传其最新内容。</li>
@@ -272,7 +274,7 @@
 <li>TRACE : 回显服务器收到的请求，主要用于测试或诊断。</li>
 <li>CONNECT : HTTP/1.1协议中预留给能够将连接改为管道方式的代理服务器。通常用于SSL加密服务器的链接（经由非加密的HTTP代理服务器）。</li>
 </ol>
-<h2 id="HTTP响应"><a href="#HTTP响应" class="headerlink" title="HTTP响应"></a>HTTP响应</h2><h3 id="http响应四部分-："><a href="#http响应四部分-：" class="headerlink" title="http响应四部分 #："></a>http响应四部分 #：</h3><ol>
+<h2 id="HTTP响应"><a href="#HTTP响应" class="headerlink" title="HTTP响应"></a>HTTP响应</h2><h3 id="http响应四部分"><a href="#http响应四部分" class="headerlink" title="http响应四部分"></a>http响应四部分</h3><ol>
 <li>协议版本号 <a href="#rsc">响应状态码</a> 状态解释</li>
 <li>响应头(key: value)</li>
 <li>空行(\n)用于分隔响应头和响应主体</li>
