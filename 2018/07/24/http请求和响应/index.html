@@ -7,7 +7,7 @@
 <head>
   <meta charset="utf-8">
   
-  <title>http请求和响应 | B0Lin&#39;s Blog</title>
+  <title>http请求和响应(未完) | B0Lin&#39;s Blog</title>
 
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
@@ -17,16 +17,16 @@
 
   <meta name="description" content="&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;首先介绍一下端口(port) ，是一种经由软件创建的服务，在一个电脑操作系统中扮演通信的端点（endpoint）。每个通信端口都会与主机的IP地址及通信协议关联。通信端口以16比特数字来表示，这被称为通信端口编号（port number），范围在0-65535。 其中常见的端口有：    20 : FTP(File Transfer Protocol">
 <meta property="og:type" content="article">
-<meta property="og:title" content="http请求和响应">
+<meta property="og:title" content="http请求和响应(未完)">
 <meta property="og:url" content="http://yoursite.com/2018/07/24/http请求和响应/index.html">
 <meta property="og:site_name" content="B0Lin&#39;s Blog">
 <meta property="og:description" content="&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;首先介绍一下端口(port) ，是一种经由软件创建的服务，在一个电脑操作系统中扮演通信的端点（endpoint）。每个通信端口都会与主机的IP地址及通信协议关联。通信端口以16比特数字来表示，这被称为通信端口编号（port number），范围在0-65535。 其中常见的端口有：    20 : FTP(File Transfer Protocol">
 <meta property="og:locale" content="default">
 <meta property="og:image" content="http://yoursite.com/2018/07/24/http请求和响应/http1.png">
 <meta property="og:image" content="http://yoursite.com/2018/07/24/http请求和响应/http2.png">
-<meta property="og:updated_time" content="2018-07-24T07:29:02.069Z">
+<meta property="og:updated_time" content="2018-07-24T07:42:49.004Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="http请求和响应">
+<meta name="twitter:title" content="http请求和响应(未完)">
 <meta name="twitter:description" content="&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;首先介绍一下端口(port) ，是一种经由软件创建的服务，在一个电脑操作系统中扮演通信的端点（endpoint）。每个通信端口都会与主机的IP地址及通信协议关联。通信端口以16比特数字来表示，这被称为通信端口编号（port number），范围在0-65535。 其中常见的端口有：    20 : FTP(File Transfer Protocol">
 <meta name="twitter:image" content="http://yoursite.com/2018/07/24/http请求和响应/http1.png">
 
@@ -190,7 +190,7 @@
 <div class="content content-post CENTER">
    <article id="post-http请求和响应" class="article article-type-post" itemprop="blogPost">
   <header class="article-header">
-    <h1 class="post-title">http请求和响应</h1>
+    <h1 class="post-title">http请求和响应(未完)</h1>
 
     <div class="article-meta">
       <span>
@@ -244,7 +244,7 @@
 <p>如图：</p>
 <p><div aling="center"><img src="http2.png" alt="curl"></div></p>
 <blockquote>
-<p>POST / HTTP/1.1<br>  Host: <a href="http://www.baidu.com" target="_blank" rel="noopener">www.baidu.com</a><br>  User-Agent: curl/7.60.0<br>  Accept: */*<br>  Content-Length: 10 上传字节数<br>  Content-Type: application/x-www-form-urlencoded 上传格式</p>
+<p>POST / HTTP/1.1<br>  Host: <a href="http://www.baidu.com" target="_blank" rel="noopener">www.baidu.com</a><br>  User-Agent: curl/7.60.0<br>  Accept: */*<br>  Content-Length: 10 上传字节数<br>  Content-Type: application/x-www-form-urlencoded 上传格式(x:未写入标准, form:表单格式, <a href="https://zh.wikipedia.org/wiki/%E7%99%BE%E5%88%86%E5%8F%B7%E7%BC%96%E7%A0%81#application/x-www-form-urlencoded%E7%B1%BB%E5%9E%8B" target="_blank" rel="noopener">urlencoded:url已经编码</a>)</p>
 </blockquote>
 <blockquote>
 <p>HTTP/1.1 302 Found<br>  Connection: Keep-Alive<br>  Content-Length: 17931<br>  Content-Type: text/html<br>  Date: Tue, 24 Jul 2018 06:14:22 GMT<br>  Etag: “54d97488-460b”<br>  Server: bfe/1.0.8.18</p>
@@ -252,7 +252,7 @@
 <p>chrome中查看请求与响应：<f12> -&gt; Network, 如果没有method选项，右键name勾选method。</f12></p>
 <p>###HTTP请求<br>http请求分为四部分:</p>
 <ol>
-<li>请求方法 路径(不包括锚点) 协议/版本号</li>
+<li>请求方法 路径(包括查询字符串，但不包括锚点，锚点是给浏览器识别的) 协议/版本号</li>
 <li>请求头(key:value),用于将客户端信息提交给服务器</li>
 <li>回车(\n)，用于分隔请求头和请求正文</li>
 <li>请求正文 提交的数据(GET没有)</li>
@@ -270,7 +270,7 @@
 <li>CONNECT : HTTP/1.1协议中预留给能够将连接改为管道方式的代理服务器。通常用于SSL加密服务器的链接（经由非加密的HTTP代理服务器）。</li>
 </ol>
 <p>###HTTP响应</p>
-<p><strong><a href="https://zh.wikipedia.org/wiki/%E8%B6%85%E6%96%87%E6%9C%AC%E4%BC%A0%E8%BE%93%E5%8D%8F%E8%AE%AE" target="_blank" rel="noopener">HTTP响应状态码</a></strong></p>
+<p><strong><a href="https://zh.wikipedia.org/wiki/%E8%B6%85%E6%96%87%E6%9C%AC%E4%BC%A0%E8%BE%93%E5%8D%8F%E8%AE%AE" target="_blank" rel="noopener">HTTP响应状态码:</a></strong></p>
 
     
   </div>
