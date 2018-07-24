@@ -24,7 +24,7 @@
 <meta property="og:locale" content="default">
 <meta property="og:image" content="http://yoursite.com/2018/07/24/http请求和响应/http1.png">
 <meta property="og:image" content="http://yoursite.com/2018/07/24/http请求和响应/http2.png">
-<meta property="og:updated_time" content="2018-07-24T07:51:17.299Z">
+<meta property="og:updated_time" content="2018-07-24T08:45:38.682Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="http请求和响应(未完)">
 <meta name="twitter:description" content="&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;端口(port) ，是一种经由软件创建的服务，在一个电脑操作系统中扮演通信的端点（endpoint）。每个通信端口都会与主机的IP地址及通信协议关联。通信端口以16比特数字来表示，这被称为通信端口编号（port number），范围在0-65535。 其中常见的端口有：    20 : FTP(File Transfer Protocol) Data">
@@ -243,8 +243,9 @@
 <p>GET / HTTP/1.1 请求方法 文件路径(默认为根目录,即”/“.与Host合并组成url) 协议/版本号<br>Host: <a href="http://www.baidu.com" target="_blank" rel="noopener">www.baidu.com</a> 访问域名<br>User-Agent: curl/7.60.0 发起响应的应用/版本号<br>Accept: */* 接受返回的任何内容<br>name: b0lin 请求头中自己添加的额外信息</p>
 </blockquote>
 <blockquote>
-<p>HTTP/1.1 200 OK<br> Accept-Ranges: bytes<br> Cache-Control: private, no-cache, no-store, proxy-revalidate, no-transform<br> Connection: Keep-Alive<br> Content-Length: 2443<br> Content-Type: text/html<br> Date: Tue, 24 Jul 2018 05:12:22 GMT<br> Etag: “588603eb-98b”<br> Last-Modified: Mon, 23 Jan 2017 13:23:55 GMT<br> Pragma: no-cache<br> Server: bfe/1.0.8.18<br> Set-Cookie: BDORZ=27315; max-age=86400; domain=.baidu.com; path=/</p>
+<p>HTTP/1.1 200 OK<br> Accept-Ranges: bytes<br> Cache-Control: private, no-cache, no-store, proxy-revalidate, no-transform<br> Connection: Keep-Alive<br> Content-Length: 2443 服务器返回数据长度<br> Content-Type: text/html 服务器响应主题中返回数据类型<br> Date: Tue, 24 Jul 2018 05:12:22 GMT<br> Etag: “588603eb-98b”<br> Last-Modified: Mon, 23 Jan 2017 13:23:55 GMT<br> Pragma: no-cache<br> Server: bfe/1.0.8.18<br> Set-Cookie: BDORZ=27315; max-age=86400; domain=.baidu.com; path=/</p>
 </blockquote>
+<p> html页面</p>
 <p><strong>e.g. curl -s -v -X POST -d “1234567890” – “<a href="https://www.baidu.com&quot;" target="_blank" rel="noopener">https://www.baidu.com&quot;</a></strong><br>-X &lt;POST|GET&gt;: Specifies  a  custom  request(POST|GET)  method to use when communicating with the HTTP server.<br>-d “” : the data to upload with the request method POST</p>
 <p>如图：</p>
 <p><div aling="center"><img src="http2.png" alt="curl"></div></p>
@@ -258,7 +259,7 @@
 <h3 id="HTTP请求"><a href="#HTTP请求" class="headerlink" title="HTTP请求"></a>HTTP请求</h3><p>http请求分为四部分:</p>
 <ol>
 <li>请求方法 路径(包括查询字符串，但不包括锚点，锚点是给浏览器识别的) 协议/版本号</li>
-<li>请求头(key:value),用于将客户端信息提交给服务器</li>
+<li>请求头(key: value),用于将客户端信息提交给服务器</li>
 <li>回车(\n)，用于分隔请求头和请求正文</li>
 <li>请求正文 提交的数据(GET没有)</li>
 </ol>
@@ -274,7 +275,15 @@
 <li>TRACE : 回显服务器收到的请求，主要用于测试或诊断。</li>
 <li>CONNECT : HTTP/1.1协议中预留给能够将连接改为管道方式的代理服务器。通常用于SSL加密服务器的链接（经由非加密的HTTP代理服务器）。</li>
 </ol>
-<h3 id="HTTP响应"><a href="#HTTP响应" class="headerlink" title="HTTP响应"></a>HTTP响应</h3><p><strong><a href="https://zh.wikipedia.org/wiki/%E8%B6%85%E6%96%87%E6%9C%AC%E4%BC%A0%E8%BE%93%E5%8D%8F%E8%AE%AE" target="_blank" rel="noopener">HTTP响应状态码:</a></strong></p>
+<h3 id="HTTP响应"><a href="#HTTP响应" class="headerlink" title="HTTP响应"></a>HTTP响应</h3><p>http响应四部分：</p>
+<ol>
+<li>协议版本号 <a href="#rsc">响应状态码</a> 状态解释</li>
+<li>响应头(key: value)</li>
+<li></li>
+<li></li>
+</ol>
+<p><span id="rsc"><a href="https://zh.wikipedia.org/wiki/%E8%B6%85%E6%96%87%E6%9C%AC%E4%BC%A0%E8%BE%93%E5%8D%8F%E8%AE%AE" target="_blank" rel="noopener">响应状态码</a></span><br>1xx :<br>2xx : 成功<br>    200<br>    204<br>3xx : 重定向<br>    301 : 永久重定向<br>    302 : 临时重定向<br>    304 :<br>4xx : 客户端错误<br>    404 : url错误，访问页面不存在</p>
+<p>5xx : 服务器端错误<br>    502 : </p>
 
     
   </div>
