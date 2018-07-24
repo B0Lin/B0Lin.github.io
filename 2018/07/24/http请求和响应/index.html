@@ -22,10 +22,12 @@
 <meta property="og:site_name" content="B0Lin&#39;s Blog">
 <meta property="og:description" content="&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;首先介绍一下端口(port) ，是一种经由软件创建的服务，在一个电脑操作系统中扮演通信的端点（endpoint）。每个通信端口都会与主机的IP地址及通信协议关联。通信端口以16比特数字来表示，这被称为通信端口编号（port number），范围在0-65535。 其中常见的端口有：    20 : FTP(File Transfer Protocol">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-07-24T05:07:03.561Z">
+<meta property="og:image" content="http://yoursite.com/2018/07/24/http请求和响应/http请求和响应/url.png">
+<meta property="og:updated_time" content="2018-07-24T05:19:14.105Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="http请求和响应">
 <meta name="twitter:description" content="&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;首先介绍一下端口(port) ，是一种经由软件创建的服务，在一个电脑操作系统中扮演通信的端点（endpoint）。每个通信端口都会与主机的IP地址及通信协议关联。通信端口以16比特数字来表示，这被称为通信端口编号（port number），范围在0-65535。 其中常见的端口有：    20 : FTP(File Transfer Protocol">
+<meta name="twitter:image" content="http://yoursite.com/2018/07/24/http请求和响应/http请求和响应/url.png">
 
   
 
@@ -228,7 +230,8 @@
       <p>&nbsp;&nbsp;&nbsp;&nbsp;首先介绍一下<a href="https://en.wikipedia.org/wiki/Port_(computer_networking" target="_blank" rel="noopener">端口(port)</a> ，是一种经由软件创建的服务，在一个电脑操作系统中扮演通信的端点（endpoint）。每个通信端口都会与主机的IP地址及通信协议关联。通信端口以16比特数字来表示，这被称为通信端口编号（port number），范围在0-65535。</p>
 <p><strong>其中常见的端口有：</strong><br>    20 : FTP(File Transfer Protocol) Data Transfer<br>    21 : FTP(File Fransfer Protocol) Command Control<br>    22 : SSH(Secure Shell) Secure Login<br>    25 : SMTP(Simple Mail Transfer Protocol) E-mail Routing<br>    53 : DNS(Domain Name System) service<br>    80 : <a href="https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol" target="_blank" rel="noopener">HTTP(Hypertext Transfer Protocol)</a> used in the World Wide Web<br>    443 : Hypertext Transfer Protocol over TLS/SSL<br>    1080 : socks proxy<br>    3306 : MySQL database system</p>
 <p>更多端口协议参见:<a href="https://en.wikipedia.org/wiki/List_of_TCP_and_UDP_port_numbers" target="_blank" rel="noopener">List of TCP and UDP port numbers</a>.</p>
-<p>curl -s -v -H “what you want to add to the request” – “<a href="https://www.baidu.com&quot;" target="_blank" rel="noopener">https://www.baidu.com&quot;</a><br>curl : transfer a url.<br>-s : –silent. Don’t show progress meter or error message.<br>-v : –verbose. Makes the feching more verbose. Mostly useful for debugging.<br>-H : –header. Extra header to use when getting a web page.<br>– “” : the url of the web page you want to surf.</p>
+<p>curl -s -v -H “what you want to add to the request” – “<a href="https://www.baidu.com&quot;" target="_blank" rel="noopener">https://www.baidu.com&quot;</a><br>curl : transfer a url.<br>-s : –silent. Don’t show progress meter or error message.<br>-v : –verbose. Makes the feching more verbose. Mostly useful for debugging.<br>-H : –header. Extra header to use when getting a web page. key: value.<br>– “” : the url of the web page you want to surf.<br>结果如图：</p>
+<p><div align="center"><img src="./http请求和响应/url.png" alt="curl..."></div></p>
 <p>http请求头</p>
 
     
