@@ -24,7 +24,7 @@
 <meta property="og:locale" content="default">
 <meta property="og:image" content="http://yoursite.com/2018/07/24/http请求和响应/http1.png">
 <meta property="og:image" content="http://yoursite.com/2018/07/24/http请求和响应/http2.png">
-<meta property="og:updated_time" content="2018-07-24T07:42:49.004Z">
+<meta property="og:updated_time" content="2018-07-24T07:45:28.710Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="http请求和响应(未完)">
 <meta name="twitter:description" content="&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;首先介绍一下端口(port) ，是一种经由软件创建的服务，在一个电脑操作系统中扮演通信的端点（endpoint）。每个通信端口都会与主机的IP地址及通信协议关联。通信端口以16比特数字来表示，这被称为通信端口编号（port number），范围在0-65535。 其中常见的端口有：    20 : FTP(File Transfer Protocol">
@@ -185,6 +185,11 @@
 </div>
 
 
+  <div id="toc" class="toc-article">
+    <strong class="toc-title">文章目录</strong>
+    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#curl-简介"><span class="toc-text">curl 简介</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#HTTP请求"><span class="toc-text">HTTP请求</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#HTTP响应"><span class="toc-text">HTTP响应</span></a></li></ol>
+  </div>
+
 
 
 <div class="content content-post CENTER">
@@ -231,7 +236,7 @@
       <p>&nbsp;&nbsp;&nbsp;&nbsp;首先介绍一下<a href="https://en.wikipedia.org/wiki/Port_(computer_networking" target="_blank" rel="noopener">端口(port)</a> ，是一种经由软件创建的服务，在一个电脑操作系统中扮演通信的端点（endpoint）。每个通信端口都会与主机的IP地址及通信协议关联。通信端口以16比特数字来表示，这被称为通信端口编号（port number），范围在0-65535。</p>
 <p><strong>其中常见的端口有：</strong><br>    20 : FTP(File Transfer Protocol) Data Transfer<br>    21 : FTP(File Fransfer Protocol) Command Control<br>    22 : SSH(Secure Shell) Secure Login<br>    25 : SMTP(Simple Mail Transfer Protocol) E-mail Routing<br>    53 : DNS(Domain Name System) service<br>    80 : <a href="https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol" target="_blank" rel="noopener">HTTP(Hypertext Transfer Protocol)</a> used in the World Wide Web<br>    443 : Hypertext Transfer Protocol over TLS/SSL<br>    1080 : socks proxy<br>    3306 : MySQL database system</p>
 <p><strong>更多端口参见:<a href="https://en.wikipedia.org/wiki/List_of_TCP_and_UDP_port_numbers" target="_blank" rel="noopener">List of TCP and UDP port numbers</a>.</strong></p>
-<p>###curl 简介<br><strong>e.g. curl -s -v -H “what you want to add to the request” – “<a href="https://www.baidu.com&quot;" target="_blank" rel="noopener">https://www.baidu.com&quot;</a></strong><br>curl : transfer a url.<br>-s : –silent. Don’t show progress meter or error message.<br>-v : –verbose. Makes the feching more verbose. Mostly useful for debugging.<br>-H : –header. Extra header to use when getting a web page. key: value.<br>– “” : the url of the web page you want to surf.</p>
+<h3 id="curl-简介"><a href="#curl-简介" class="headerlink" title="curl 简介"></a>curl 简介</h3><p><strong>e.g. curl -s -v -H “what you want to add to the request” – “<a href="https://www.baidu.com&quot;" target="_blank" rel="noopener">https://www.baidu.com&quot;</a></strong><br>curl : transfer a url.<br>-s : –silent. Don’t show progress meter or error message.<br>-v : –verbose. Makes the feching more verbose. Mostly useful for debugging.<br>-H : –header. Extra header to use when getting a web page. key: value.<br>– “” : the url of the web page you want to surf.</p>
 <p>如图：</p>
 <p><div aling="center"><img src="http1.png" alt="curl"></div></p>
 <blockquote>
@@ -250,7 +255,7 @@
 <p>HTTP/1.1 302 Found<br>  Connection: Keep-Alive<br>  Content-Length: 17931<br>  Content-Type: text/html<br>  Date: Tue, 24 Jul 2018 06:14:22 GMT<br>  Etag: “54d97488-460b”<br>  Server: bfe/1.0.8.18</p>
 </blockquote>
 <p>chrome中查看请求与响应：<f12> -&gt; Network, 如果没有method选项，右键name勾选method。</f12></p>
-<p>###HTTP请求<br>http请求分为四部分:</p>
+<h3 id="HTTP请求"><a href="#HTTP请求" class="headerlink" title="HTTP请求"></a>HTTP请求</h3><p>http请求分为四部分:</p>
 <ol>
 <li>请求方法 路径(包括查询字符串，但不包括锚点，锚点是给浏览器识别的) 协议/版本号</li>
 <li>请求头(key:value),用于将客户端信息提交给服务器</li>
@@ -269,8 +274,7 @@
 <li>TRACE : 回显服务器收到的请求，主要用于测试或诊断。</li>
 <li>CONNECT : HTTP/1.1协议中预留给能够将连接改为管道方式的代理服务器。通常用于SSL加密服务器的链接（经由非加密的HTTP代理服务器）。</li>
 </ol>
-<p>###HTTP响应</p>
-<p><strong><a href="https://zh.wikipedia.org/wiki/%E8%B6%85%E6%96%87%E6%9C%AC%E4%BC%A0%E8%BE%93%E5%8D%8F%E8%AE%AE" target="_blank" rel="noopener">HTTP响应状态码:</a></strong></p>
+<h3 id="HTTP响应"><a href="#HTTP响应" class="headerlink" title="HTTP响应"></a>HTTP响应</h3><p><strong><a href="https://zh.wikipedia.org/wiki/%E8%B6%85%E6%96%87%E6%9C%AC%E4%BC%A0%E8%BE%93%E5%8D%8F%E8%AE%AE" target="_blank" rel="noopener">HTTP响应状态码:</a></strong></p>
 
     
   </div>
