@@ -24,7 +24,7 @@
 <meta property="og:locale" content="default">
 <meta property="og:image" content="http://yoursite.com/2018/07/24/http请求和响应/http1.png">
 <meta property="og:image" content="http://yoursite.com/2018/07/24/http请求和响应/http2.png">
-<meta property="og:updated_time" content="2018-07-24T06:19:21.251Z">
+<meta property="og:updated_time" content="2018-07-24T07:01:38.296Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="http请求和响应">
 <meta name="twitter:description" content="&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;首先介绍一下端口(port) ，是一种经由软件创建的服务，在一个电脑操作系统中扮演通信的端点（endpoint）。每个通信端口都会与主机的IP地址及通信协议关联。通信端口以16比特数字来表示，这被称为通信端口编号（port number），范围在0-65535。 其中常见的端口有：    20 : FTP(File Transfer Protocol">
@@ -231,30 +231,33 @@
       <p>&nbsp;&nbsp;&nbsp;&nbsp;首先介绍一下<a href="https://en.wikipedia.org/wiki/Port_(computer_networking" target="_blank" rel="noopener">端口(port)</a> ，是一种经由软件创建的服务，在一个电脑操作系统中扮演通信的端点（endpoint）。每个通信端口都会与主机的IP地址及通信协议关联。通信端口以16比特数字来表示，这被称为通信端口编号（port number），范围在0-65535。</p>
 <p><strong>其中常见的端口有：</strong><br>    20 : FTP(File Transfer Protocol) Data Transfer<br>    21 : FTP(File Fransfer Protocol) Command Control<br>    22 : SSH(Secure Shell) Secure Login<br>    25 : SMTP(Simple Mail Transfer Protocol) E-mail Routing<br>    53 : DNS(Domain Name System) service<br>    80 : <a href="https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol" target="_blank" rel="noopener">HTTP(Hypertext Transfer Protocol)</a> used in the World Wide Web<br>    443 : Hypertext Transfer Protocol over TLS/SSL<br>    1080 : socks proxy<br>    3306 : MySQL database system</p>
 <p><strong>更多端口参见:<a href="https://en.wikipedia.org/wiki/List_of_TCP_and_UDP_port_numbers" target="_blank" rel="noopener">List of TCP and UDP port numbers</a>.</strong></p>
-<p>curl 简介<br><strong>e.g. curl -s -v -H “what you want to add to the request” – “<a href="https://www.baidu.com&quot;" target="_blank" rel="noopener">https://www.baidu.com&quot;</a></strong><br>curl : transfer a url.<br>-s : –silent. Don’t show progress meter or error message.<br>-v : –verbose. Makes the feching more verbose. Mostly useful for debugging.<br>-H : –header. Extra header to use when getting a web page. key: value.<br>– “” : the url of the web page you want to surf.<br>如图：</p>
+<p>###curl 简介<br><strong>e.g. curl -s -v -H “what you want to add to the request” – “<a href="https://www.baidu.com&quot;" target="_blank" rel="noopener">https://www.baidu.com&quot;</a></strong><br>curl : transfer a url.<br>-s : –silent. Don’t show progress meter or error message.<br>-v : –verbose. Makes the feching more verbose. Mostly useful for debugging.<br>-H : –header. Extra header to use when getting a web page. key: value.<br>– “” : the url of the web page you want to surf.</p>
+<p>如图：</p>
 <p><div aling="center"><img src="http1.png" alt="curl"></div></p>
 <blockquote>
 <p>GET / HTTP/1.1 请求方法 文件路径(默认为根目录,即”/“.与Host合并组成url) 协议/版本号<br>Host: <a href="http://www.baidu.com" target="_blank" rel="noopener">www.baidu.com</a> 访问域名<br>User-Agent: curl/7.60.0 发起响应的应用/版本号<br>Accept: */* 接受返回的任何内容<br>name: b0lin 请求头中自己添加的额外信息</p>
 </blockquote>
 <blockquote>
-<p>HTTP/1.1 200 OK<br>Accept-Ranges: bytes<br>Cache-Control: private, no-cache, no-store, proxy-revalidate, no-transform<br>Connection: Keep-Alive<br>Content-Length: 2443<br>Content-Type: text/html<br>Date: Tue, 24 Jul 2018 05:12:22 GMT<br>Etag: “588603eb-98b”<br>Last-Modified: Mon, 23 Jan 2017 13:23:55 GMT<br>Pragma: no-cache<br>Server: bfe/1.0.8.18<br>Set-Cookie: BDORZ=27315; max-age=86400; domain=.baidu.com; path=/</p>
+<p>HTTP/1.1 200 OK<br> Accept-Ranges: bytes<br> Cache-Control: private, no-cache, no-store, proxy-revalidate, no-transform<br> Connection: Keep-Alive<br> Content-Length: 2443<br> Content-Type: text/html<br> Date: Tue, 24 Jul 2018 05:12:22 GMT<br> Etag: “588603eb-98b”<br> Last-Modified: Mon, 23 Jan 2017 13:23:55 GMT<br> Pragma: no-cache<br> Server: bfe/1.0.8.18<br> Set-Cookie: BDORZ=27315; max-age=86400; domain=.baidu.com; path=/</p>
 </blockquote>
-<p><strong>e.g. curl -s -v -X POST -d “1234567890” – “<a href="https://www.baidu.com&quot;" target="_blank" rel="noopener">https://www.baidu.com&quot;</a></strong><br>-X &lt;POST|GET&gt;: Specifies  a  custom  request(POST|GET)  method to use when communicating with the HTTP server.<br>-d “” : the data to upload with the request method POST<br>如图：</p>
+<p><strong>e.g. curl -s -v -X POST -d “1234567890” – “<a href="https://www.baidu.com&quot;" target="_blank" rel="noopener">https://www.baidu.com&quot;</a></strong><br>-X &lt;POST|GET&gt;: Specifies  a  custom  request(POST|GET)  method to use when communicating with the HTTP server.<br>-d “” : the data to upload with the request method POST</p>
+<p>如图：</p>
 <p><div aling="center"><img src="http2.png" alt="curl"></div></p>
 <blockquote>
-<p>POST / HTTP/1.1<br>  Host: <a href="http://www.baidu.com" target="_blank" rel="noopener">www.baidu.com</a><br>  User-Agent: curl/7.60.0<br>  Accept: <em>/</em><br>  Content-Length: 10<br>  Content-Type: application/x-www-form-urlencoded</p>
+<p>POST / HTTP/1.1<br>  Host: <a href="http://www.baidu.com" target="_blank" rel="noopener">www.baidu.com</a><br>  User-Agent: curl/7.60.0<br>  Accept: */*<br>  Content-Length: 10 上传字节数<br>  Content-Type: application/x-www-form-urlencoded 上传格式</p>
 </blockquote>
 <blockquote>
 <p>HTTP/1.1 302 Found<br>  Connection: Keep-Alive<br>  Content-Length: 17931<br>  Content-Type: text/html<br>  Date: Tue, 24 Jul 2018 06:14:22 GMT<br>  Etag: “54d97488-460b”<br>  Server: bfe/1.0.8.18</p>
 </blockquote>
-<p>chrome中查看请求与相应：<f12> -&gt; Network, 如果没有method选项，右键name勾选method。</f12></p>
-<p>http请求分为四部分:</p>
+<p>chrome中查看请求与响应：<f12> -&gt; Network, 如果没有method选项，右键name勾选method。</f12></p>
+<p>###http请求<br>http请求分为四部分:</p>
 <ol>
 <li></li>
 <li></li>
 <li></li>
 <li></li>
 </ol>
+<p>###http响应</p>
 
     
   </div>
