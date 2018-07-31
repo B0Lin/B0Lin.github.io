@@ -22,7 +22,7 @@
 <meta property="og:site_name" content="B0Lin&#39;s Blog">
 <meta property="og:description" content="Markdown简介Markdown是一个Web上使用的文本到HTML的转换工具，可以通过简单、易读易写的文本格式生成结构化的HTML文档。HTML 是一种发布的格式，Markdown 是一种书写的格式。Markdown宗旨是实现「易读易写」，并不是HTML的一种替代，它只涵盖了HTML的纯文本编辑部分，因此Markdown的语法很少。不在 Markdown 涵盖范围之内的标签，都可以直接在文档里">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-07-31T10:07:59.477Z">
+<meta property="og:updated_time" content="2018-07-31T10:11:56.495Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Markdown基本语法">
 <meta name="twitter:description" content="Markdown简介Markdown是一个Web上使用的文本到HTML的转换工具，可以通过简单、易读易写的文本格式生成结构化的HTML文档。HTML 是一种发布的格式，Markdown 是一种书写的格式。Markdown宗旨是实现「易读易写」，并不是HTML的一种替代，它只涵盖了HTML的纯文本编辑部分，因此Markdown的语法很少。不在 Markdown 涵盖范围之内的标签，都可以直接在文档里">
@@ -184,7 +184,7 @@
 
   <div id="toc" class="toc-article">
     <strong class="toc-title">文章目录</strong>
-    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Markdown简介"><span class="toc-text">Markdown简介</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Markdown基本语法"><span class="toc-text">Markdown基本语法</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#标题"><span class="toc-text">标题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#区块引用"><span class="toc-text">区块引用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#列表"><span class="toc-text">列表</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#代码区块"><span class="toc-text">代码区块</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#分隔线"><span class="toc-text">分隔线</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#链接"><span class="toc-text">链接</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#强调"><span class="toc-text">强调</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#代码"><span class="toc-text">代码</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#图片"><span class="toc-text">图片</span></a></li></ol></li></ol>
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Markdown简介"><span class="toc-text">Markdown简介</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Markdown基本语法"><span class="toc-text">Markdown基本语法</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#标题"><span class="toc-text">标题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#区块引用"><span class="toc-text">区块引用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#列表"><span class="toc-text">列表</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#代码区块"><span class="toc-text">代码区块</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#分隔线"><span class="toc-text">分隔线</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#链接"><span class="toc-text">链接</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#强调"><span class="toc-text">强调</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#代码"><span class="toc-text">代码</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#图片"><span class="toc-text">图片</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#其他"><span class="toc-text">其他</span></a></li></ol></li></ol>
   </div>
 
 
@@ -235,7 +235,8 @@
 <li>使用”=”和”-“分别表示一级标题和二级标题。</li>
 </ol>
 <blockquote>
-<p>This is an H1<br><span color="black"><code>=============</code></span><br>This is an H2<br>-------------</p>
+<p>This is an H1</p>
+<p><font color="black"><code>=============</code></font><br>This is an H2<br>-------------</p>
 </blockquote>
 <ol start="2">
 <li>使用”#”表示标题等级”#”个数对应标题的级数。</li>
@@ -348,6 +349,11 @@
 <blockquote>
 <p>![img](img_url “title”)<br>注：title可以省略<br>或<br>![img][id]</p>
 <p>[id]: img_url “title”<br>注：title可以省略</p>
+</blockquote>
+<h3 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h3><p>改变Markdown字体颜色：</p>
+<blockquote>
+<p>&lt;font color=”red”&gt; 这段字体将转换为红色 &lt;/font&gt;<br>效果如下：</p>
+<font color="red"> 这段字体将转换为红色</font>
 </blockquote>
 <p>Markdown中插入字符：<br><a href="https://blog.csdn.net/katherine_hsr/article/details/79179622" target="_blank" rel="noopener">数学公式符号</a><br><a href="https://blog.csdn.net/qq_32320399/article/details/80261157" target="_blank" rel="noopener">转义符号</a></p>
 
