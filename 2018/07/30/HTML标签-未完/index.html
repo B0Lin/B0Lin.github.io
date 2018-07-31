@@ -22,7 +22,7 @@
 <meta property="og:site_name" content="B0Lin&#39;s Blog">
 <meta property="og:description" content="简介HTML(HyperText Markup Language, 超文本标记语言), 他描述并定义了一个网页的基本布局。CSS(Cascading Style Sheets, 层叠样式表), 通常用来描述一个网页的表现与展示效果。 JavaScript通常用来实现网页的功能与行为。  “超文本”是指单个网站内或网站之间将网页彼此连接的链接。 HTML用”标记”来注明文本、图片和其他内容，以便在W">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-07-31T16:05:37.356Z">
+<meta property="og:updated_time" content="2018-07-31T17:29:08.840Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="HTML标签(未完)">
 <meta name="twitter:description" content="简介HTML(HyperText Markup Language, 超文本标记语言), 他描述并定义了一个网页的基本布局。CSS(Cascading Style Sheets, 层叠样式表), 通常用来描述一个网页的表现与展示效果。 JavaScript通常用来实现网页的功能与行为。  “超文本”是指单个网站内或网站之间将网页彼此连接的链接。 HTML用”标记”来注明文本、图片和其他内容，以便在W">
@@ -241,16 +241,33 @@
 <li>属性</li>
 </ol>
 <ul>
-<li>download: 该属性指示浏览器下载URL而不是导航到URL，因此将提示用户将其保存为本地文件。download属性如果有值，该值将作为下载文件的默认名称。</li>
-<li>href: 必须属性，该属性值为锚指定一个超文本链接资源</li>
-<li>hreflang: 该属性用于指定链接文档的人类语言，仅提供建议，没有内置的功能。</li>
+<li>download: 该属性指示浏览器下载URL而不是导航到URL，因此将提示用户将其保存为本地文件。download属性如果有值，该值将作为下载文件的默认名称。如果不定义download属性，也可以通过在响应头中添加<code>Content-Type: application/octet-steam</code>字段来实现。</li>
+<li><p>href: 必须属性，该属性值为锚指定一个超文本链接资源。<br>  该属性有几种取值</p>
+<ul>
+<li>无协议绝对路径(<code>href=&quot;//google.com&quot;</code>),当服务器http-server打开时</li>
+<li>锚点(<code>href=&quot;#element_id&quot;</code>)</li>
+<li>查询字符串(<code>href=&quot;?key=value&quot;</code>)</li>
+<li>相对路径(<code>href=&quot;./relative_path&quot;</code>)</li>
+<li><p>伪协议(<code>href=&quot;javascript:;&quot;</code>或<code>href=&quot;javascript:void(0);&quot;</code>)，点击标签后将执行一段js代码，页面不刷新。</p>
+<p>跳转到新页面(<code>www.google.com</code>)的几种方式：</p>
+</li>
+<li><code>&lt;a href=&quot;http://www.google.com&quot;&gt;achor&lt;/a&gt;</code>在当前页面中打开。</li>
+<li><code>&lt;a href=&quot;javascript:void(0);&quot; onclick=&quot;window.location.assign(&#39;http://www.google.com&#39;)&quot;&gt; anchor&lt;/a&gt;</code>: 在当前页面打开。</li>
+<li><code>&lt;a href=&quot;javascript:window.open(&#39;http://www.baidu.com&#39;);&quot;&gt;achor&lt;/a&gt;</code>: 在新页面中打开。</li>
+<li><code>&lt;a href=&quot;javascript:;&quot; onclick=&quot;window.open(&#39;http://www.baidu.com&#39;);&quot;&gt;achor&lt;/a&gt;</code>: 在新页面中打开。<br>注：<code>window.open()</code>函数的第二个可选参数name可以指定target属性(<code>_self</code>、<code>_blank</code>、<code>_parent</code>或<code>_top</code>)或窗口名称。</li>
+</ul>
+</li>
+<li><p>hreflang: 该属性用于指定链接文档的人类语言，仅提供建议，没有内置的功能。</p>
+</li>
 <li>referrer </li>
-<li>target: 该属性指定在何处显示链接资源。<br>  该属性值有四种默认值：<ul>
+<li><p>target: 该属性指定在何处显示链接资源。<br>  该属性值有四种默认值：</p>
+<ul>
 <li><code>_self</code>: 默认值，在当前页面加载。</li>
 <li><code>_blank</code>: 在新窗口中打开。</li>
 <li><code>_parent</code>: 在当前上下文(iframe)的父浏览上下文(iframe)中打开</li>
-<li><code>_top</code>: 在顶层浏览上下文中打开，如果没有parent框架或浏览上下文，则打开方式同_self。<br>该属性还通常与iframe的name属性值搭配使用，如下：<blockquote>
-<p><code>&lt;iframe name=&quot;ifr&quot; src=&quot;#&quot;&gt;iframe&lt;/iframe&gt;</code><br><code>&lt;a target=&quot;ifr&quot; href=&quot;ifr_url&quot;&gt;anchor&lt;/a&gt;</code></p>
+<li><p><code>_top</code>: 在顶层浏览上下文中打开，如果没有parent框架或浏览上下文，则打开方式同_self。<br>该属性还通常与iframe的name属性值搭配使用，如下：</p>
+<blockquote>
+<p><code>&lt;iframe name=&quot;ifr&quot; src=&quot;#&quot;&gt;iframe&lt;/iframe&gt;</code><br><code>&lt;a target=&quot;ifr&quot; href=&quot;ifr_url&quot;&gt;anchor&lt;/a&gt;</code><br>其中a标签的target属性对应iframe的name属性，表示a标签指向的链接将在iframe中打开。</p>
 </blockquote>
 </li>
 </ul>
