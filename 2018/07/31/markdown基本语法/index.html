@@ -22,7 +22,7 @@
 <meta property="og:site_name" content="B0Lin&#39;s Blog">
 <meta property="og:description" content="Markdown简介Markdown是一个Web上使用的文本到HTML的转换工具，可以通过简单、易读易写的文本格式生成结构化的HTML文档。HTML 是一种发布的格式，Markdown 是一种书写的格式。Markdown宗旨是实现「易读易写」，并不是HTML的一种替代，它只涵盖了HTML的纯文本编辑部分，因此Markdown的语法很少。不在 Markdown 涵盖范围之内的标签，都可以直接在文档里">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-07-31T06:54:41.066Z">
+<meta property="og:updated_time" content="2018-07-31T07:00:59.925Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Markdown基本语法">
 <meta name="twitter:description" content="Markdown简介Markdown是一个Web上使用的文本到HTML的转换工具，可以通过简单、易读易写的文本格式生成结构化的HTML文档。HTML 是一种发布的格式，Markdown 是一种书写的格式。Markdown宗旨是实现「易读易写」，并不是HTML的一种替代，它只涵盖了HTML的纯文本编辑部分，因此Markdown的语法很少。不在 Markdown 涵盖范围之内的标签，都可以直接在文档里">
@@ -255,14 +255,25 @@ Vestibulum enim wisi, viverra nec, fringilla in, laoreet vitae, risus.
 </code></pre><p>区块引用可以嵌套，根据不同层数使用不同数量的&gt;符号即可，如下：</p>
 <blockquote>
 </blockquote>
-<pre><code>\&gt;This is the first level of quoting.
+<pre><code>\&gt; This is the first level of quoting.
 \&gt;
 \&gt; \&gt; This is nested blockquote.
 </code></pre><p>引用的区块内可以使用其他Markdown语法。<br>想要在区块中使用&gt;符号，只要在前面加上\符号转义即可。</p>
-<h3 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h3><p>无序列表使用 * 、+ 或 - 其中一种即可，如下</p>
+<h3 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h3><p>无序列表使用 * 、+ 或 - 其中一种即可，如下：</p>
 <blockquote>
 </blockquote>
 <p>* red<br>    + green<br>    - blue</p>
+<p>有序列表使用数字加上英文句号，后面跟空行即可，如下：</p>
+<blockquote>
+</blockquote>
+<pre><code>1. bird
+2. McHale
+</code></pre><p>这种写法等同于</p>
+<blockquote>
+</blockquote>
+<ol><br>    <li>bird</li><br>    <li>McHale</li><br></ol>
+
+
 
     
   </div>
