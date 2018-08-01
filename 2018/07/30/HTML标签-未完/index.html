@@ -23,7 +23,7 @@
 <meta property="og:description" content="4              简介HTML(HyperText Markup Language, 超文本标记语言), 他描述并定义了一个网页的基本布局。CSS(Cascading Style Sheets, 层叠样式表), 通常用来描述一个网页的表现与展示效果。 JavaScript通常用来实现网页的功能与行为。  “超文本”是指单个网站内或网站之间将网页彼此连接的链接。 HTML用”标记”来注明">
 <meta property="og:locale" content="default">
 <meta property="og:image" content="http://yoursite.com/2018/07/30/HTML标签-未完/btn_name_value.png">
-<meta property="og:updated_time" content="2018-08-01T07:53:03.559Z">
+<meta property="og:updated_time" content="2018-08-01T08:21:53.003Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="HTML常见标签(未完)">
 <meta name="twitter:description" content="4              简介HTML(HyperText Markup Language, 超文本标记语言), 他描述并定义了一个网页的基本布局。CSS(Cascading Style Sheets, 层叠样式表), 通常用来描述一个网页的表现与展示效果。 JavaScript通常用来实现网页的功能与行为。  “超文本”是指单个网站内或网站之间将网页彼此连接的链接。 HTML用”标记”来注明">
@@ -313,7 +313,7 @@
 </li>
 <li><p><code>novalidate</code>: 提交表单时是否需要验证，其值为布尔类型。</p>
 </li>
-<li><p><code>enctype</code>: 当<code>method</code>属性值为POST时，<code>enctype</code>是提交数据的MIME类型。<br> 可能取值有：</p>
+<li><p>&lt;span id=”form_enctype&gt;”<code>enctype</code>: 当<code>method</code>属性值为POST时，<code>enctype</code>是提交数据的MIME类型。<br> 可能取值有：</p>
 <ul>
 <li><code>application/x-www-form-urlencoded</code>(默认)</li>
 <li><code>multipart/form-data</code> </li>
@@ -375,15 +375,28 @@
 <h3 id="button标签"><a href="#button标签" class="headerlink" title="button标签"></a><a href="">button标签</a></h3><p>按钮默认样式跟宿主环境有关，可以使用CSS更改。常用属性：</p>
 <ol>
 <li><code>disabled</code>: 不可选中。</li>
-<li><code>name</code>和<code>value</code>: 跟表单其他数据一起以<code>name=value</code>键值对的形式提交。<div align="center"><img src="/2018/07/30/HTML标签-未完/btn_name_value.png" alt="btn_name_value"></div></li>
-<li><code>type</code>:<br>下面是HTML5新增属性</li>
-<li><code>autofocus</code>: 布尔属性，页面加载后自动获得焦点。</li>
-<li><code>form</code>: </li>
-<li><code>formaction</code>: </li>
-<li><code>formenctype</code>: </li>
-<li><code>formmethod</code>: </li>
-<li><code>formnovalidate</code>: </li>
-<li><code>formtarget</code>: </li>
+<li><code>name</code>和<code>value</code>: 跟表单其他数据一起以<code>name=value</code>键值对的形式提交。</li>
+</ol>
+<div align="center"><img src="/2018/07/30/HTML标签-未完/btn_name_value.png" alt="btn_name_value"></div>
+
+<ol start="3">
+<li><code>type</code>: 定义<code>&lt;button&gt;</code>类型，可选属性值有：</li>
+</ol>
+<ul>
+<li>submit: 表单中按钮唯一时的默认属性值。</li>
+<li>reset: 重置所有组件为初始值。</li>
+<li>button</li>
+<li>menu: 打开一个<code>&lt;menu&gt;</code>元素定义的菜单(实验中的功能)。</li>
+</ul>
+<p>下面是HTML5新增属性</p>
+<ol start="4">
+<li><p><code>autofocus</code>: 布尔属性，页面加载后自动获得焦点。</p>
+</li>
+<li><p><code>form</code>: 属性值为同一文档中的某一个<code>&lt;form&gt;</code>元素的<code>id</code>属性，该<code>&lt;button&gt;</code>将与这个<code>&lt;form&gt;</code>元素相关联，使得<code>&lt;button&gt;</code>可以放在文档中的任意位置。</p>
+</li>
+<li><p><code>formenctype</code>: 指定表单提交内容的类型。如果定义了该属性，且<code>&lt;button&gt;</code>的<code>type</code>属性为<code>submit</code>，则将覆盖<code>&lt;form&gt;</code>中的<a href="#form_enctype"><code>enctype</code></a>值。</p>
+</li>
+<li><code>formaction</code>、<code>formmethod</code>、<code>formnovalidate</code>和<code>formtarget</code>的用法同<code>formenctype</code>，都会覆盖<code>&lt;form&gt;</code>元素中对应的属性。</li>
 </ol>
 <h3 id="table标签"><a href="#table标签" class="headerlink" title="table标签"></a><a href="">table标签</a></h3><h3 id=""><a href="#" class="headerlink" title=""></a><a href=""></a></h3><!--
 
