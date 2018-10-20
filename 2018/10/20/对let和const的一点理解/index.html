@@ -15,17 +15,17 @@
     <meta name="keywords" content="forsigner,前端,设计,Hexo主题,前端开发,用户体验,设计,frontend,design,nodejs,JavaScript" />
   
 
-  <meta name="description" content="理解主要基于这篇文章和《你不知道的JavaScript》以及阮一峰的ES6入门  letlet三个特点：a.不允许重复声明：同一个作用域内，不允许再次声明同名变量，要特别注意函数作用域，123function(arg)&amp;#123;  let arg;&amp;#125;   下面则不会报错：123function(arg)&amp;#123;   &amp;#123; let arg;&amp;#125;&amp;#125; b.暂时性">
+  <meta name="description" content="理解主要基于这篇文章、《你不知道的JavaScript》、阮一峰的ES6入门等等。 letlet三个特点：1.暂时性死区(Temporal Dead Zone)：let声明的变量会屏蔽掉其所在作用域外的同名变量。12345678910111213var tmp = &amp;quot;tmp1&amp;quot;;&amp;#123;    tmp = &amp;quot;tmp2&amp;quot;;     consolo.log(">
 <meta property="og:type" content="article">
 <meta property="og:title" content="对let和const的一点理解（待续）">
 <meta property="og:url" content="http://yoursite.com/2018/10/20/对let和const的一点理解/index.html">
 <meta property="og:site_name" content="B0Lin&#39;s Blog">
-<meta property="og:description" content="理解主要基于这篇文章和《你不知道的JavaScript》以及阮一峰的ES6入门  letlet三个特点：a.不允许重复声明：同一个作用域内，不允许再次声明同名变量，要特别注意函数作用域，123function(arg)&amp;#123;  let arg;&amp;#125;   下面则不会报错：123function(arg)&amp;#123;   &amp;#123; let arg;&amp;#125;&amp;#125; b.暂时性">
+<meta property="og:description" content="理解主要基于这篇文章、《你不知道的JavaScript》、阮一峰的ES6入门等等。 letlet三个特点：1.暂时性死区(Temporal Dead Zone)：let声明的变量会屏蔽掉其所在作用域外的同名变量。12345678910111213var tmp = &amp;quot;tmp1&amp;quot;;&amp;#123;    tmp = &amp;quot;tmp2&amp;quot;;     consolo.log(">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-10-20T09:42:39.709Z">
+<meta property="og:updated_time" content="2018-10-20T10:17:23.804Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="对let和const的一点理解（待续）">
-<meta name="twitter:description" content="理解主要基于这篇文章和《你不知道的JavaScript》以及阮一峰的ES6入门  letlet三个特点：a.不允许重复声明：同一个作用域内，不允许再次声明同名变量，要特别注意函数作用域，123function(arg)&amp;#123;  let arg;&amp;#125;   下面则不会报错：123function(arg)&amp;#123;   &amp;#123; let arg;&amp;#125;&amp;#125; b.暂时性">
+<meta name="twitter:description" content="理解主要基于这篇文章、《你不知道的JavaScript》、阮一峰的ES6入门等等。 letlet三个特点：1.暂时性死区(Temporal Dead Zone)：let声明的变量会屏蔽掉其所在作用域外的同名变量。12345678910111213var tmp = &amp;quot;tmp1&amp;quot;;&amp;#123;    tmp = &amp;quot;tmp2&amp;quot;;     consolo.log(">
 
   
 
@@ -182,6 +182,11 @@
 </div>
 
 
+  <div id="toc" class="toc-article">
+    <strong class="toc-title">文章目录</strong>
+    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#let"><span class="toc-text">let</span></a></li></ol>
+  </div>
+
 
 
 <div class="content content-post CENTER">
@@ -225,14 +230,13 @@
 
   <div class="article-content">
     
-      <p>理解主要基于<a href="https://zhuanlan.zhihu.com/p/28140450" target="_blank" rel="noopener">这篇文章</a>和《你不知道的JavaScript》以及阮一峰的ES6入门</p>
-<ol>
-<li>let<br>let三个特点：<br>a.不允许重复声明：同一个作用域内，不允许再次声明同名变量，要特别注意函数作用域，<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">function(arg)&#123;</span><br><span class="line">  let arg;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-<p>下面则不会报错：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">function(arg)&#123;</span><br><span class="line">   &#123; let arg;&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>b.暂时性死区<br>c.不存在变量提升</p>
-<p>遗留问题<br>referenceerror typeerror<br>js几种作用域<br>rhs lhs</p>
+      <p>理解主要基于<a href="https://zhuanlan.zhihu.com/p/28140450" target="_blank" rel="noopener">这篇文章</a>、《你不知道的JavaScript》、阮一峰的ES6入门等等。</p>
+<h3 id="let"><a href="#let" class="headerlink" title="let"></a>let</h3><p>let三个特点：<br>1.暂时性死区(Temporal Dead Zone)：let声明的变量会屏蔽掉其所在作用域外的同名变量。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">var tmp = &quot;tmp1&quot;;</span><br><span class="line"></span><br><span class="line">&#123;</span><br><span class="line">    tmp = &quot;tmp2&quot;; </span><br><span class="line">    consolo.log(tmp);// ReferenceError, 由于块作用域中声明了`let tmp`, 则该块级作用域对于tmp变量存在暂时性死区，外部定义的`var tmp`被屏蔽，此时tmp初始化在其被let声明之前所以报错RE</span><br><span class="line"></span><br><span class="line">    let tmp;</span><br><span class="line">    consolo.log(tmp);// Undefined, 由于暂时性死区屏蔽了外部的` var tmp = &quot;tmp1&quot; `, 此时let仅仅被声明，并未定义，因此报错Undefined</span><br><span class="line"></span><br><span class="line">    tmp = &quot;tmp3&quot;;</span><br><span class="line">    consolo.log(tmp);// tmp3</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>ReferenceError（引用错误）与TypeError（类型错误）区别：<br>ReferenceError：引用一个未被定义的变量时，将会抛出一个 ReferenceError。<br>TypeError：对象用来表示值的类型非<strong>预期类型</strong>时发生的错误。</p>
+<p>2.不允许重复声明：同一个作用域内，不允许再次声明同名变量，要特别注意函数作用域：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">function(arg)&#123;</span><br><span class="line">  let arg; // 报错，let声明的arg变量在同一作用域中存在同名的形参</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">function(arg)&#123;</span><br><span class="line">   &#123; let arg; &#125; //不会报错，TDZ</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>3.不存在变量提升</p>
+<p>遗留问题<br>referenceerror typeerror<br>ES6中js几种作用域：全局、函数、块<br>rhs lhs<br>声明 初始化。。。</p>
 
     
   </div>
