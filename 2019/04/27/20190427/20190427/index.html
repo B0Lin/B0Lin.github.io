@@ -7,7 +7,7 @@
 <head>
   <meta charset="utf-8">
   
-  <title>对let和const的一点理解（待续） | B0Lin&#39;s Blog</title>
+  <title>B0Lin&#39;s Blog</title>
 
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
@@ -15,17 +15,17 @@
     <meta name="keywords" content="forsigner,前端,设计,Hexo主题,前端开发,用户体验,设计,frontend,design,nodejs,JavaScript" />
   
 
-  <meta name="description" content="理解主要基于这篇文章、《你不知道的JavaScript》、阮一峰的ES6入门等等。 letlet三个特点：1.暂时性死区(Temporal Dead Zone)：let声明的变量会屏蔽掉其所在作用域外的同名变量。12345678910111213var tmp = &amp;quot;tmp1&amp;quot;;&amp;#123;    tmp = &amp;quot;tmp2&amp;quot;;     console.log(">
+  <meta name="description" content="20190427">
 <meta property="og:type" content="article">
-<meta property="og:title" content="对let和const的一点理解（待续）">
-<meta property="og:url" content="http://yoursite.com/2018/10/20/对let和const的一点理解/index.html">
+<meta property="og:title" content="B0Lin&#39;s Blog">
+<meta property="og:url" content="http://yoursite.com/2019/04/27/20190427/20190427/index.html">
 <meta property="og:site_name" content="B0Lin&#39;s Blog">
-<meta property="og:description" content="理解主要基于这篇文章、《你不知道的JavaScript》、阮一峰的ES6入门等等。 letlet三个特点：1.暂时性死区(Temporal Dead Zone)：let声明的变量会屏蔽掉其所在作用域外的同名变量。12345678910111213var tmp = &amp;quot;tmp1&amp;quot;;&amp;#123;    tmp = &amp;quot;tmp2&amp;quot;;     console.log(">
+<meta property="og:description" content="20190427">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-10-20T10:46:00.426Z">
+<meta property="og:updated_time" content="2019-04-27T11:36:41.261Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="对let和const的一点理解（待续）">
-<meta name="twitter:description" content="理解主要基于这篇文章、《你不知道的JavaScript》、阮一峰的ES6入门等等。 letlet三个特点：1.暂时性死区(Temporal Dead Zone)：let声明的变量会屏蔽掉其所在作用域外的同名变量。12345678910111213var tmp = &amp;quot;tmp1&amp;quot;;&amp;#123;    tmp = &amp;quot;tmp2&amp;quot;;     console.log(">
+<meta name="twitter:title" content="B0Lin&#39;s Blog">
+<meta name="twitter:description" content="20190427">
 
   
 
@@ -182,22 +182,17 @@
 </div>
 
 
-  <div id="toc" class="toc-article">
-    <strong class="toc-title">文章目录</strong>
-    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#let"><span class="toc-text">let</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#const"><span class="toc-text">const</span></a></li></ol>
-  </div>
-
 
 
 <div class="content content-post CENTER">
-   <article id="post-对let和const的一点理解" class="article article-type-post" itemprop="blogPost">
+   <article id="post-20190427/20190427" class="article article-type-post" itemprop="blogPost">
   <header class="article-header">
-    <h1 class="post-title">对let和const的一点理解（待续）</h1>
+    <h1 class="post-title">(no title)</h1>
 
     <div class="article-meta">
       <span>
         <i class="icon-calendar"></i>
-        <span>2018.10.20</span>
+        <span>2019.04.27</span>
       </span>
 
       
@@ -213,7 +208,7 @@
       
         <span>
           <i class="icon-comment"></i>
-          <a href="http://yoursite.com/2018/10/20/对let和const的一点理解/#disqus_thread"></a>
+          <a href="http://yoursite.com/2019/04/27/20190427/20190427/#disqus_thread"></a>
         </span>
       
 
@@ -230,14 +225,7 @@
 
   <div class="article-content">
     
-      <p>理解主要基于<a href="https://zhuanlan.zhihu.com/p/28140450" target="_blank" rel="noopener">这篇文章</a>、《你不知道的JavaScript》、阮一峰的ES6入门等等。</p>
-<h2 id="let"><a href="#let" class="headerlink" title="let"></a>let</h2><p>let三个特点：<br>1.暂时性死区(Temporal Dead Zone)：let声明的变量会屏蔽掉其所在作用域外的同名变量。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">var tmp = &quot;tmp1&quot;;</span><br><span class="line"></span><br><span class="line">&#123;</span><br><span class="line">    tmp = &quot;tmp2&quot;; </span><br><span class="line">    console.log(tmp);// ReferenceError, 由于块作用域中声明了`let tmp`, 则该块级作用域对于tmp变量存在暂时性死区，外部定义的`var tmp`被屏蔽，此时tmp初始化在其被let声明之前所以报错RE</span><br><span class="line"></span><br><span class="line">    let tmp;</span><br><span class="line">    console.log(tmp);// Undefined, 由于暂时性死区屏蔽了外部的` var tmp = &quot;tmp1&quot; `, 此时let仅仅被声明，并未定义，因此报错Undefined</span><br><span class="line"></span><br><span class="line">    tmp = &quot;tmp3&quot;;</span><br><span class="line">    console.log(tmp);// tmp3</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>ReferenceError（引用错误）与TypeError（类型错误）区别：<br>ReferenceError：引用一个未被定义的变量时，将会抛出一个 ReferenceError。<br>TypeError：对象用来表示值的类型非<strong>预期类型</strong>时发生的错误。</p>
-<p>2.不允许重复声明：同一个作用域内，不允许再次声明同名变量，要特别注意函数作用域：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">function(arg)&#123;</span><br><span class="line">  let arg; // 报错，let声明的arg变量在同一作用域中存在同名的形参</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">function(arg)&#123;</span><br><span class="line">   &#123; let arg; &#125; //不会报错，TDZ</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>3.不存在变量提升</p>
-<p>声明（declare，创建）<br>初始化<br>赋值</p>
-<h2 id="const"><a href="#const" class="headerlink" title="const"></a>const</h2><p>遗留问题<br>referenceerror typeerror<br>ES6中js几种作用域：全局、函数、块<br>rhs lhs</p>
+      <p>20190427</p>
 
     
   </div>
@@ -275,10 +263,10 @@
 
    
   <div class="box-prev-next clearfix">
-    <a class="show pull-left" href="/2018/10/16/前后端分离/">
+    <a class="show pull-left" href="/2019/04/27/20190427/">
         <i class="icon icon-angle-left"></i>
     </a>
-    <a class="show pull-right" href="/2019/04/27/20190427/">
+    <a class="hide pull-right" href="/">
         <i class="icon icon-angle-right"></i>
     </a>
   </div>
@@ -407,7 +395,7 @@
   <script>
     var disqus_shortname = 'B0Lin';
     
-    var disqus_url = 'http://yoursite.com/2018/10/20/对let和const的一点理解/';
+    var disqus_url = 'http://yoursite.com/2019/04/27/20190427/20190427/';
     
     (function(){
       var dsq = document.createElement('script');
