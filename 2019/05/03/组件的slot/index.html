@@ -7,7 +7,7 @@
 <head>
   <meta charset="utf-8">
   
-  <title>B0Lin&#39;s Blog</title>
+  <title>组件的slot | B0Lin&#39;s Blog</title>
 
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
@@ -15,17 +15,17 @@
     <meta name="keywords" content="forsigner,前端,设计,Hexo主题,前端开发,用户体验,设计,frontend,design,nodejs,JavaScript" />
   
 
-  <meta name="description" content="##一、具名插槽：    123456789//组件my-component的template中定义&amp;lt;slot name=&amp;quot;head&amp;quot;&amp;gt; &amp;lt;br&amp;gt;//组件使用时&amp;lt;my-component&amp;gt;    &amp;lt;template v-slot:head&amp;gt;    名为head的插槽中的内容    &amp;lt;/template&amp;gt;&amp;lt;/my-">
+  <meta name="description" content="一、具名插槽：    123456789//组件my-component的template中定义&amp;lt;slot name=&amp;quot;head&amp;quot;&amp;gt; &amp;lt;br&amp;gt;//组件使用时&amp;lt;my-component&amp;gt;    &amp;lt;template v-slot:head&amp;gt;    名为head的插槽中的内容    &amp;lt;/template&amp;gt;&amp;lt;/my-co">
 <meta property="og:type" content="article">
-<meta property="og:title" content="B0Lin&#39;s Blog">
-<meta property="og:url" content="http://yoursite.com/2019/05/03/slot/index.html">
+<meta property="og:title" content="组件的slot">
+<meta property="og:url" content="http://yoursite.com/2019/05/03/组件的slot/index.html">
 <meta property="og:site_name" content="B0Lin&#39;s Blog">
-<meta property="og:description" content="##一、具名插槽：    123456789//组件my-component的template中定义&amp;lt;slot name=&amp;quot;head&amp;quot;&amp;gt; &amp;lt;br&amp;gt;//组件使用时&amp;lt;my-component&amp;gt;    &amp;lt;template v-slot:head&amp;gt;    名为head的插槽中的内容    &amp;lt;/template&amp;gt;&amp;lt;/my-">
+<meta property="og:description" content="一、具名插槽：    123456789//组件my-component的template中定义&amp;lt;slot name=&amp;quot;head&amp;quot;&amp;gt; &amp;lt;br&amp;gt;//组件使用时&amp;lt;my-component&amp;gt;    &amp;lt;template v-slot:head&amp;gt;    名为head的插槽中的内容    &amp;lt;/template&amp;gt;&amp;lt;/my-co">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-05-03T07:24:58.325Z">
+<meta property="og:updated_time" content="2019-05-03T07:43:13.938Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="B0Lin&#39;s Blog">
-<meta name="twitter:description" content="##一、具名插槽：    123456789//组件my-component的template中定义&amp;lt;slot name=&amp;quot;head&amp;quot;&amp;gt; &amp;lt;br&amp;gt;//组件使用时&amp;lt;my-component&amp;gt;    &amp;lt;template v-slot:head&amp;gt;    名为head的插槽中的内容    &amp;lt;/template&amp;gt;&amp;lt;/my-">
+<meta name="twitter:title" content="组件的slot">
+<meta name="twitter:description" content="一、具名插槽：    123456789//组件my-component的template中定义&amp;lt;slot name=&amp;quot;head&amp;quot;&amp;gt; &amp;lt;br&amp;gt;//组件使用时&amp;lt;my-component&amp;gt;    &amp;lt;template v-slot:head&amp;gt;    名为head的插槽中的内容    &amp;lt;/template&amp;gt;&amp;lt;/my-co">
 
   
 
@@ -185,9 +185,9 @@
 
 
 <div class="content content-post CENTER">
-   <article id="post-slot" class="article article-type-post" itemprop="blogPost">
+   <article id="post-组件的slot" class="article article-type-post" itemprop="blogPost">
   <header class="article-header">
-    <h1 class="post-title">(no title)</h1>
+    <h1 class="post-title">组件的slot</h1>
 
     <div class="article-meta">
       <span>
@@ -208,7 +208,7 @@
       
         <span>
           <i class="icon-comment"></i>
-          <a href="http://yoursite.com/2019/05/03/slot/#disqus_thread"></a>
+          <a href="http://yoursite.com/2019/05/03/组件的slot/#disqus_thread"></a>
         </span>
       
 
@@ -225,9 +225,16 @@
 
   <div class="article-content">
     
-      <p>##一、具名插槽：<br>    <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">//组件my-component的template中定义</span><br><span class="line">&lt;slot name=&quot;head&quot;&gt; </span><br><span class="line">&lt;br&gt;</span><br><span class="line">//组件使用时</span><br><span class="line">&lt;my-component&gt;</span><br><span class="line">    &lt;template v-slot:head&gt;</span><br><span class="line">    名为head的插槽中的内容</span><br><span class="line">    &lt;/template&gt;</span><br><span class="line">&lt;/my-component&gt;</span><br></pre></td></tr></table></figure></p>
-<p>##二、作用域插槽<br>    组件模板<slot></slot>中的数据是在其父组件的作用域中被渲染，因此该作用域中的内容不能访问该组件中的数据<br>    解决：可以把该组件中需要使用的数据（变量名）绑定在该组件模板中对应<slot>的一个同名特性上。<br>    <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;slot :user=&quot;user&quot;&gt;</span><br><span class="line">    &#123;&#123;user.name&#125;&#125;</span><br><span class="line">&lt;/slot&gt;</span><br></pre></td></tr></table></figure></slot></p>
-<pre><code>&lt;slot&gt;上的这个特性被称为插槽prop。
+      <p>一、具名插槽：<br>    <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">//组件my-component的template中定义</span><br><span class="line">&lt;slot name=&quot;head&quot;&gt; </span><br><span class="line">&lt;br&gt;</span><br><span class="line">//组件使用时</span><br><span class="line">&lt;my-component&gt;</span><br><span class="line">    &lt;template v-slot:head&gt;</span><br><span class="line">    名为head的插槽中的内容</span><br><span class="line">    &lt;/template&gt;</span><br><span class="line">&lt;/my-component&gt;</span><br></pre></td></tr></table></figure></p>
+<p>二、作用域插槽<br>    组件模板<slot></slot>中的数据是在其父组件的作用域中被渲染，因此该作用域中的内容不能访问该组件中的数据<br>    解决：可以把该组件中需要使用的数据（变量名）绑定在该组件模板中对应<slot>的一个同名特性上。<br>    <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;slot :user=&quot;user&quot;&gt;</span><br><span class="line">    &#123;&#123;user.name&#125;&#125;</span><br><span class="line">&lt;/slot&gt;</span><br></pre></td></tr></table></figure></slot></p>
+<pre><code>slot标签中的这个特性被称为插槽prop。当只有默认插槽时，组件标签可以当做插槽的模板来使用，这样就可以在组件标签上直接使用v-slot指令。
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;my-component v-slot:default=&quot;slotProps&quot;&gt;</span><br><span class="line">    &#123;&#123;slotProps.user.name&#125;&#125;</span><br><span class="line">&lt;/my-component&gt;</span><br></pre></td></tr></table></figure>
+
+也可以将default省去，简写为：
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;my-component v-slot=&quot;slotProps&gt;</span><br><span class="line">    &#123;&#123;slotProps.user.name&#125;&#125;</span><br><span class="line">&lt;/my-component&gt;</span><br></pre></td></tr></table></figure>
+
+注：默认插槽语法不能与具名插槽混用，这会导致作用域不明确。当出现多个插槽时，上面两种写法不可用，只能始终使用完整的基于template标签的语法，如下：
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&lt;my-component&gt;</span><br><span class="line">    &lt;template v-slot:default=&quot;slotProps&quot;&gt;</span><br><span class="line">    ...</span><br><span class="line">    &lt;/template&gt;</span><br><span class="line">    &lt;template v-slot:other=&quot;otherSlotProps&gt;</span><br><span class="line">    ...</span><br><span class="line">    &lt;/template&gt;</span><br><span class="line">&lt;/my-component&gt;</span><br></pre></td></tr></table></figure>
 </code></pre>
     
   </div>
@@ -397,7 +404,7 @@
   <script>
     var disqus_shortname = 'B0Lin';
     
-    var disqus_url = 'http://yoursite.com/2019/05/03/slot/';
+    var disqus_url = 'http://yoursite.com/2019/05/03/组件的slot/';
     
     (function(){
       var dsq = document.createElement('script');
