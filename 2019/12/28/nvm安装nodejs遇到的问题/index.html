@@ -15,15 +15,18 @@
     <meta name="keywords" content="forsigner,前端,设计,Hexo主题,前端开发,用户体验,设计,frontend,design,nodejs,JavaScript" />
   
 
-  <meta property="og:type" content="article">
+  <meta name="description" content="已解决windows下安装nvm成功后显示nvm can not found，解决办法：进入.nvm路径，新建.bash_profile，添加如下代码： export NVM_DIR=”$HOME/.nvm”[ -s “$NVM_DIR/nvm.sh” ] &amp;amp;&amp;amp; . “$NVM_DIR/nvm.sh” # This loads nvm然后执行source .bash_profil">
+<meta property="og:type" content="article">
 <meta property="og:title" content="nvm安装nodejs遇到的问题">
 <meta property="og:url" content="http://yoursite.com/2019/12/28/nvm安装nodejs遇到的问题/index.html">
 <meta property="og:site_name" content="B0Lin&#39;s Blog">
+<meta property="og:description" content="已解决windows下安装nvm成功后显示nvm can not found，解决办法：进入.nvm路径，新建.bash_profile，添加如下代码： export NVM_DIR=”$HOME/.nvm”[ -s “$NVM_DIR/nvm.sh” ] &amp;amp;&amp;amp; . “$NVM_DIR/nvm.sh” # This loads nvm然后执行source .bash_profil">
 <meta property="og:locale" content="default">
 <meta property="og:image" content="http://yoursite.com/2019/12/28/nvm安装nodejs遇到的问题/issue1.png">
-<meta property="og:updated_time" content="2019-12-28T04:43:14.319Z">
+<meta property="og:updated_time" content="2019-12-28T05:05:12.404Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="nvm安装nodejs遇到的问题">
+<meta name="twitter:description" content="已解决windows下安装nvm成功后显示nvm can not found，解决办法：进入.nvm路径，新建.bash_profile，添加如下代码： export NVM_DIR=”$HOME/.nvm”[ -s “$NVM_DIR/nvm.sh” ] &amp;amp;&amp;amp; . “$NVM_DIR/nvm.sh” # This loads nvm然后执行source .bash_profil">
 <meta name="twitter:image" content="http://yoursite.com/2019/12/28/nvm安装nodejs遇到的问题/issue1.png">
 
   
@@ -224,7 +227,13 @@
 
   <div class="article-content">
     
-      <div align="center"><img src="/2019/12/28/nvm安装nodejs遇到的问题/issue1.png" alt="issue1"></div>
+      <ol>
+<li>已解决<br>windows下安装nvm成功后显示<code>nvm can not found</code>，解决办法：<br>进入.nvm路径，新建.bash_profile，添加如下代码：<blockquote>
+<p>export NVM_DIR=”$HOME/.nvm”<br>[ -s “$NVM_DIR/nvm.sh” ] &amp;&amp; . “$NVM_DIR/nvm.sh” # This loads nvm<br>然后执行<br>source .bash_profile<br>#source指令作用：在当前bash环境下读取并执行FileName中的命令。</p>
+</blockquote>
+</li>
+<li>待解决<br>通过<code>nvm install [nodejs_version]</code>安装nodejs，node已经添加到环境变量中，生成的nodejs路径下面没有任何文件。nodejs版本号可以通过<code>nvm list</code>查看，但是<code>node -v</code>查看不到已安装的nodejs版本号。<br><div align="center"><img src="/2019/12/28/nvm安装nodejs遇到的问题/issue1.png" alt="issue1"></div><br>最后只能通过.exe文件进行安装</li>
+</ol>
 
     
   </div>
